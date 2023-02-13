@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+      "myazurefunctionproxy": {
+        "matchCondition": {
+          "methods": ["GET"],
+          "route": "/{slug}"
+        },
+        "backendUri": "https://%WEBSITE_HOSTNAME%/api/urlredirect/{slug}"
+      }
+    }
+  }
